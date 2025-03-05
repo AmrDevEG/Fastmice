@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<title>Transformice! » FullScreen</title>
+<link rel="shortcut icon" href="./images/favicon.ico">
+<script type="text/javascript" async="" src="./archives/ga.js.download"></script>      <link rel="stylesheet" type="text/css" href="./archives/1.25.18.css"> <script src="./archives/1.25.18.js.download"></script><style id="css-ddslick" type="text/css">.dd-select{ border-radius:2px; border:solid 1px #ccc; position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:5px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}.dd-option{ padding:5px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options > li:last-child > .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#f6f6f6; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}​ .dd-selected-text { font-weight:bold}​</style>        </head> <div id="contenant-corps-et-footer"> <div id="popup"></div>         <div class="modal hide fade ltr" id="popup_choix_langue"> <div class="modal-header">   </div> <div class="modal-footer"> <a class="btn" data-dismiss="modal">Fechar</a> </div> </div> <!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p><![endif]-->  <div id="barre_navigation" class="navbar navbar-fixed-top navbar-inverse"> <div class="navbar-inner"> <div class="container-fluid menu-principal ltr"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">    </a><!--BARRA DE CIMA --><center> <div class="nav-collapse collapse"> <ul class="nav  ltr">  <li class=""></li> <li class="dropdown "><li class=""></li>  <li class="active"></li>      </ul> <ul class="nav pull-right ltr">      <li class="dropdown"></li> </li> </ul> </div> </div>      <div class="container-fluid menu-secondaire">  <div class="row-fluid"> <div class="span12">         </a>  </li></a>  </li>        <div class="btn-group">    <a class="btn btn-inverse ltr " href="index.html"><span class="hidden-phone hidden-tablet">Voltar a página inicial</span></a> </div> </div> </div>  </div>  </div> </div> <div id="espace_barre_navigation" class="hidden-phone hidden-tablet" style="height: 82px;"></div></center><script type="text/javascript">
+		majTailleEspaceNavbar();
+	</script>
+<center>
+<div class="sidebar">
+<center>
+<script type="text/javascript">
+	var langue = navigator.language;
+        if (!langue) {
+                langue = navigator.browserLanguage;
+        }
+        langue = langue.substr(0, 2);
+	
+	function positionMolette(X, Y) {
+	}
+	function activerMolette(OUI, HAUT) {
+	}
+	function recupLangue() {
+		return langue;
+	}
+	function pleinEcran(OUI) {
+		if (OUI) {
+			document.getElementById("transformice").style.position="fixed";
+			document.getElementById("transformice").style.left="0";
+			document.getElementById("transformice").style.top="0";
+			document.getElementById("transformice").style.width="100%";
+			document.getElementById("transformice").style.height="100%";
+			
+			document.getElementById("WidgetTwitter").style.display="none";
+			document.getElementById("idPub").style.display="none";
+			document.getElementById("pubVerticale").style.display="none";
+		} else {
+			document.getElementById("transformice").style.position="static";
+			document.getElementById("transformice").style.width="800px";
+                        document.getElementById("transformice").style.height="600px";
+		
+			document.getElementById("WidgetTwitter").style.display="inline";	
+			document.getElementById("idPub").style.display="inline";
+			document.getElementById("pubVerticale").style.display="inline";
+		}
+	}
+	function cancelEvent(e) {
+		if (navigator.userAgent.indexOf("hrome") != -1) {
+			document.getElementById("swf2").x_moletteTransformice(e.wheelDelta);
+		}
+		e = e ? e : window.event;
+		if(e.stopPropagation)
+			e.stopPropagation();
+		if(e.preventDefault)
+			e.preventDefault();
+		e.cancelBubble = true;
+		e.cancel = true;
+		e.returnValue = false;
+		return false;
+        }
+        function hookEvent(element, eventName, callback) {
+		if (element.addEventListener) {
+                        if (eventName == 'mousewheel') {
+				element.addEventListener('DOMMouseScroll', callback, false);
+			}
+			element.addEventListener(eventName, callback, false);
+                } else if (element.attachEvent) {
+			element.attachEvent("on" + eventName, callback);
+        	}
+	}
+
+</script>
+<div class="jeu" style="width:900;height:753px;">
+
+	<div id="transformice" style="width:100%;height:100%;">
+		<object id="swf1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="100%" height="100%" align="middle">
+		<param name="allowScriptAccess" value="always">
+		<param name="movie" value="ChargerTransformice.swf">
+		<param name="menu" value="true">
+		<param name="quality" value="high">
+		<param name="bgcolor" value="#6A7495">
+		<embed id="swf2" src="ChargerTransformice.swf" wmode="direct" menu="true" quality="high" bgcolor="#6A7495" width="100%" height="100%" name="Transformice" align="middle" swliveconnect="true" allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+		</object>		<br>
+		
+<br>
+<br>
+	</div>
+</div>
+
+</div></center></body></html>
