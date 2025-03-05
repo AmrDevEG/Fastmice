@@ -1,0 +1,189 @@
+
+body {
+    /*background: rgba(237,237,235,0.7) url('http://build.digitalcraft.co/digitalcraft.png') 95% 20px no-repeat;
+    background-size: 133px;
+    font: 14px/21px Monaco, sans-serif;
+    color: #999;
+    font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    height:100%;*/
+}
+a, a:visited{/*text-decoration:none;color:#FF805F*/}
+h4{margin:0;color:#333;}
+
+
+
+header {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* top: 60px; */
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* background: #e2dddd; */
+    /* box-shadow: 0 0 5px #000; */
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition-delay: 400ms;
+    transition-delay: 400ms;
+    /*border-radius: 50px;*/
+    margin-bottom: -15px;
+}
+
+
+header.shownav {
+    width: 320px;
+    height: 180px;
+    border-radius: initial;
+}
+
+
+nav {
+    width: 50px;
+    height: 50px;
+    /* background: rgba(0,0,0,0.2); */
+}
+
+.dc-menu-trigger {
+    position: absolute;
+    top: 0;
+    left: 11px;
+    display: block;
+    width: 28px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 30;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+    transition-delay: 600ms;
+}
+
+.dc-menu-trigger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: -2px;
+    background: #2d4c4b;
+    font-size: 0;
+    user-select: none;
+    transition: background-color 0.5s;
+}
+
+.dc-menu-open .dc-menu-trigger span {
+    background-color: transparent;
+}
+
+.dc-menu-open .dc-menu-trigger {
+    left: 45%;
+    -webkit-transition: all 0.4s cubic-bezier(0.7, 0, 0.36, 0.63);
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+.dc-menu-trigger span:before,
+.dc-menu-trigger span:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2d4c4b;
+    /*border-top: 1px solid rgba(255, 255, 255, 0.55);
+     border-bottom: 1px solid rgba(88, 88, 88, 0.34); */
+    content: '';
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+.dc-menu-trigger span:before {
+    transform: translateY(-250%);
+}
+
+.dc-menu-trigger span:after {
+    transform: translateY(250%);
+}
+
+
+.dc-menu-open .dc-menu-trigger span:before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.dc-menu-open .dc-menu-trigger span:after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+.dc-menu-close .dc-menu-trigger:before {
+    animation: plusVertical 0.3s ease forwards;
+}
+
+.dc-menu-close .dc-menu-trigger:after {
+    animation: plusHorizontal 0.3s ease forwards;
+}
+
+.menu-overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+.menu-overlay.open {
+    /* background: #000; */
+    height: 100%;
+}
+
+.menu-overlay ul {
+    position: absolute;
+    visibility: hidden;
+    list-style-type:none;
+    top: -40%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+    transform: perspective(600px) rotateX(20deg) rotateY(-20deg);
+}
+
+.menu-overlay ul li {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 15px 0;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0px; */
+}
+
+.menu-overlay ul li:after {
+    content: "";
+    display: block;
+    width: 30px;
+    /* height: 1px; */
+    background: #333;
+    margin: 10px auto 0 auto;
+}
+
+.menu-overlay ul li:hover {
+    color:#eee;
+    cursor:pointer;
+}
+
+.menu-overlay.open ul {
+    top: 40px;
+    left: 14px;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+    transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+    transition-delay: 400ms;
+}
+
